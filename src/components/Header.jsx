@@ -1,102 +1,157 @@
-const Header = () => {
-  return (
-    <header className="d-flex align-items-center container justify-content-between py-4 header-main">
-      <div className="d-flex align-items-center">
-        <div>
-          <img
-            src={"/HobbyCue Logo.png"}
-            alt="Description of the image"
-            className="header-logo"
-          />
-        </div>
+import { Search, ChevronDown, ChevronUp } from "lucide-react";
+import { useState } from "react";
 
-        <div className="input-group search-bar">
-          <input
-            type="text"
-            className="form-control search-input d-none d-md-block"
-            placeholder="Search..."
-            aria-label="Search"
-            aria-describedby="searchButton"
-          />
-          <div className="input-group-append">
-            <div className="d-flex justify-content-center align-items-center h-100 w-100 header-search-button">
-              <img src="/searchIcon.png" alt="Search" className="w-50 h-50" />
+const Header = () => {
+  const [explore, setExplore] = useState(false);
+  const [hobbies, setHobbies] = useState(false);
+  return (
+    <div className="shadow">
+      <header className="d-flex align-items-center justify-content-between py-4 col-11  col-md-10 mx-auto ">
+        <div className="d-flex align-items-center">
+          <div>
+            <img
+              style={{ height: "50px" }}
+              src="/HobbyCue Logo.png"
+              alt="Description of the image"
+              className="px-4"
+            />
+          </div>
+
+          <div className="d-none d-lg-flex">
+            <input
+              type="text"
+              style={{ borderRadius: "10px 0 0 10px " }}
+              className="border px-2"
+              placeholder="Search..."
+            />
+            <div
+              className="d-flex justify-content-center align-items-center  h-100 w-100 p-2"
+              style={{
+                background: "var(--light-purple)",
+                borderRadius: "0 10px  10px 0",
+              }}
+            >
+              <Search className="text-light p-1" style={{ cursor: "pointer" }}/>
+            </div>
+          </div>
+          <div className="d-flex d-lg-none">
+            <div className="d-flex justify-content-center align-items-center  h-100 w-100 p-2">
+              <Search style={{ color: "var(--light-purple)",cursor:"pointer" }} />
             </div>
           </div>
         </div>
-      </div>
-      <div className="header-div2">
-        <div className="input-group-prepend">
-          <span className="input-group-text bg-white border-0 d-none d-md-block">
-            <img src="Explore.png" alt="Explore Logo" width="20" height="20" />
-          </span>
-        </div>
-        <select
-          className="custom-select border-0 header-select d-none d-md-block"
-          id="exploreSelect"
-        >
-          <option value="explore" selected>
-            Explore
-          </option>
-          <option value="people">People-Community</option>
-          <option value="place">Places-Venues</option>
-          <option value="place">Programs-Events</option>
-          <option value="place">Product-Store</option>
-          <option value="place">Blogs</option>
-        </select>
-        <div className="input-group-prepend d-none d-md-block">
-          <span className="input-group-text bg-white border-0">
+        <div className="d-flex align-items-center justify-content-around">
+          <div className="d-flex align-items-center">
+            <div className="position-relative me-4" style={{ cursor: "pointer" }}>
+              <div
+                className="bg-white border-0 d-none d-md-flex align-items-center"
+                onClick={() => setExplore((previousState) => !previousState)}
+              >
+                <img
+                  src="Explore.svg"
+                  className="me-2"
+                  alt="Explore Logo"
+                  width="20"
+                  height="20"
+                />
+                <span className="me-2">Explore</span>
+                <span className="p-1">
+                  {explore ? <ChevronUp /> : <ChevronDown />}
+                </span>
+              </div>
+              <div
+                className="position-absolute flex-column bg-white"
+                style={{
+                  display: `${explore ? "flex" : "none"}`,
+                  zIndex: "9999",
+                  top: "65px",
+                  minWidth: "230px",
+                }}
+              >
+                <div className="border-bottom px-3 py-1" value="people">
+                  People-Community
+                </div>
+                <div className="border-bottom px-3 py-1" value="place">
+                  Places-Venues
+                </div>
+                <div className="border-bottom px-3 py-1" value="place">
+                  Programs-Events
+                </div>
+                <div className="border-bottom px-3 py-1" value="place">
+                  Product-Store
+                </div>
+                <div className="border-bottom px-3 py-1" value="place">
+                  Blogs
+                </div>
+              </div>
+            </div>
+            <div className="position-relative" style={{ cursor: "pointer" }}>
+              <div
+                className="bg-white border-0 d-none d-md-flex align-items-center"
+                onClick={() => setHobbies((previousState) => !previousState)}
+              >
+                <img
+                  src="Hobbies.svg"
+                  className="me-2"
+                  alt="Hobbies Logo"
+                  width="20"
+                  height="20"
+                />
+                <span className="me-2">Hobbies</span>
+                <span className="p-1">
+                  {hobbies ? <ChevronUp /> : <ChevronDown />}
+                </span>
+              </div>
+              <div
+                className="position-absolute flex-column bg-white"
+                style={{
+                  display: `${hobbies ? "flex" : "none"}`,
+                  zIndex: "9999",
+                  top: "65px",
+                  minWidth: "230px",
+                }}
+              >
+                <div className="border-bottom px-3 py-1" value="place">
+                  Painting-Sketches
+                </div>
+                <div className="border-bottom px-3 py-1" value="place">
+                  Football
+                </div>
+                <div className="border-bottom px-3 py-1" value="place">
+                  Cricket
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="d-flex align-items-center px-3  ">
             <img
-              src="Star 1.png"
-              alt="Explore Logo"
-              width="17"
-              height="17"
-              className="hobbies-logo"
+              src="/Bookmark.svg"
+              alt=""
+              className="me-4 d-none d-md-block"
+              style={{ cursor: "pointer" }}
             />
-          </span>
+            <img
+              src="/Notification.svg"
+              alt=""
+              className="me-4 d-none d-md-block"
+              style={{ cursor: "pointer" }}
+            />
+            <img
+              src="/ShoppingCart.svg"
+              alt=""
+              className="me-4 d-none d-md-block"
+              style={{ cursor: "pointer" }}
+            />
+          </div>
+          <button
+            className="d-none d-md-block bg-white px-4 py-2 rounded-3"
+            style={{ border: "solid 1px var(--light-purple)" }}
+          >
+            Sign In
+          </button>
         </div>
-        <select
-          className="custom-select border-0 header-select d-none d-md-block"
-          id="exploreSelect"
-        >
-          <option value="explore" selected>
-            Hobbies
-          </option>
-          <option value="people">Painting-Sketches</option>
-          <option value="people">Football</option>
-          <option value="people">Cricket</option>
-        </select>
-        <img
-          src="bookmark_black_24dp 1.png"
-          className="mx-2 d-none d-md-block"
-          alt="Bookmark Logo"
-          width="20"
-          height="20"
-        />
-        <img
-          className="mx-5"
-          src="notifications_black_24dp 1.png"
-          alt="Notification Logo"
-          width="20"
-          height="20"
-        />
-         {/* <img
-          src="searchIcon.png"
-          alt="Notification Logo"
-          className="d-md-none"
-          width="20"
-          height="20"
-        /> */}
-        <img
-          src="menu_black_24dp 1.png"
-          alt="Notification Logo"
-          className="d-md-none"
-          width="20"
-          height="20"
-        />
-        <button className="sign-in-button d-none d-md-block">Sign In</button>
-      </div>
-    </header>
+      </header>
+    </div>
   );
 };
 

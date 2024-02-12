@@ -1,184 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+:root {
+  --light-purple: #8064a2;
+  --lighter-purple: #f7f5f9;
+  --muted-purple: #ccc1da;
+  --bg-purple: #f7f5f9;
+  --light-blue: #0096c8;
+  --lighter-blue: #f7fdff;
+}
 html body #root * {
   font-family: "Poppins", sans-serif;
-}
-
-.header-main{
-  width: 100%;
-}
-
-* {
   margin: 0;
   padding: 0;
-  font-family: Poppins sans-serif;
-}
-
-.header-logo {
-  width: 290px;
-  margin-right: 5vw;
-}
-
-.header-search-button {
-  border-radius: 0px 8px 8px 0px;
-  background-color: #8064a2;
-}
-
-.header-div2 {
-  display: flex;
-  align-items: center;
-}
-
-.sign-in-button {
-  border: 1px solid #8064a2;
-  width: 112px;
-  height: 40px;
-  color: #8064a2;
-  border-radius: 10px;
-}
-
-.hobbies-logo {
-  background-color: #8064a2;
-  border-radius: 50px;
-  padding: 2px;
-}
-
-.search-bar {
-  width: 15vw;
-}
-
-.header-select {
-  width: 6vw;
-}
-
-.search-input {
-  height: 5vh;
-}
-
-.Google-Button {
-  border: 1px solid #8064a2;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.8rem;
-  height: 40px;
-  margin-top: 7px;
-  font: bold;
-  font-weight: 600;
-}
-
-.Google-Logo {
-  margin-right: 109px;
-}
-
-.login-seperator {
-  display: flex;
-  align-items: center;
-}
-
-.login-seperator hr {
-  max-width: 149px;
-}
-
-.banner-title {
-  font-family: "poppins", sans-serif;
-}
-
-.banner-text {
-  font-family: "poppins", sans-serif;
-  color: rgb(42, 42, 42);
-  width: 100%;
-}
-.cards-main {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-.cards {
-  height: 330px;
-  width: 330px;
-  padding: 3px;
-  border: 1px solid #8064a2;
-  border-radius: 8px;
-  margin: 24px 24px;
-  padding: 24px 24px;
-}
-
-.cards span {
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-  margin-left: 24px;
-}
-
-.cards p {
-  font-family: Poppins;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: normal;
-  margin-top: 26px;
-  margin-bottom: 30px;
-}
-
-.cards-heading {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.cards button {
-  padding: 12px 42px;
-  border: 1px solid #ced4da;
-  color: #8064a2;
-  background-color: white;
-  border-radius: 8px;
-}
-
-.cards button:hover {
-  border: 1px solid #8064a2;
-}
-
-.addcard {
-  margin: 10px 10px;
-  padding: 42px 42px;
-  border: 1px solid #8064a2;
-  border-radius: 8px;
-}
-
-.addcard button {
-  padding: 12px 42px;
-  border: 1px solid #ced4da;
-  color: #8064a2;
-  background-color: white;
-  border-radius: 8px;
-}
-
-.addcard button:hover {
-  border: 1px solid #8064a2;
-}
-
-.addcard-heading {
-  display: flex;
-  align-items: center;
-}
-.addcard-heading img {
-  margin-right: 17px;
-}
-
-.addcard-heading span {
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-  margin-left: 24px;
-}
-
-.addcard p {
-  margin: 32px;
 }
 
 .footer-main p {
@@ -231,7 +64,7 @@ html body #root * {
   flex-direction: column;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
@@ -251,8 +84,8 @@ a{
   width: 100%;
 }
 
-.testimonial-main{
-  background-color: #F7F5F9;
+.testimonial-main {
+  background-color: #f7f5f9;
   border-radius: 8px;
 }
 
@@ -268,13 +101,6 @@ a{
   flex-direction: column;
 }
 
-
-#banner1 {
-  padding: 2rem;
-}
-#banner1_signIn {
-  margin-bottom: 10rem !important;
-}
 @media (min-width: 576px) {
   #banner1 {
     padding: 3rem;
@@ -291,9 +117,8 @@ a{
 }
 
 @media (max-width: 768px) {
-  .footer-list{
+  .footer-list {
     flex-direction: column;
-   
   }
   .header-logo {
     width: 30vw;
