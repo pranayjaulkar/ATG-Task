@@ -32,12 +32,12 @@ const Cards = () => {
   return (
     <div className="cards-container container">
       {cards.map((card) => (
-        <div key={card.title} className=" border">
+        <div key={card.title} style={{height:"300px"}} className=" border">
           <div className="d-flex gap-4 align-items-center pb-4">
             <img src={card.icon} height="40px" width="40px" />
             <span className="fs-4 fw-bolder">{card.title}</span>
           </div>
-          <p className="pb-4">{card.description}</p>
+          <p style={{marginBottom:"0"}} className="pb-4">{card.description}</p>
           <button
             className="px-4 py-2 bg-white "
             style={{
