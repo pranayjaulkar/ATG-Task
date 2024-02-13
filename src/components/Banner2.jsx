@@ -1,14 +1,11 @@
 const Banner2 = () => {
   return (
-    <div style={{ marginTop: "100px", marginBottom: "100px" }}>
-      <div
-        style={{ padding: "100px", background: "#F7FDFF" }}
-        className="d-flex flex-column gap-5"
-      >
+    <div className="banner2-main-container">
+      <div className="d-flex flex-column gap-5">
         <div>
           <h2 className="mb-5 fs-1 fst-italic" style={{ marginBottom: "30px" }}>
             <span>Your </span>
-            <span style={{ color: "var(--light-purple)" }}>hobby</span>{" "}
+            <span style={{ color: "var(--light-purple)" }}>hobby</span>
             <span>, Your </span>
             <span style={{ color: "var(--light-blue)" }}>Community...</span>
           </h2>

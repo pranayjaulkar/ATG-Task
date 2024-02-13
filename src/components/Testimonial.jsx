@@ -1,6 +1,6 @@
 const Testimonial = () => {
   return (
-    <div style={{ margin: "100px" }}>
+    <div className="testimonials-main-container">
       <div
         className="container mx-auto"
         style={{
@@ -25,17 +25,36 @@ const Testimonial = () => {
           safely explore various hobbies and activities in my city, all under
           one roof, is an excellent idea and I highly recommend it.
         </p>
-        <div className="d-flex justify-content-between align-item-center">
+        {/* Audio Player  */}
+        <div className="d-flex flex-column-reverse flex-lg-row gap-3 justify-content-between align-item-center">
           <div
-            className="d-flex gap-5 justify-content-around align-items-center px-4 py-2"
+            className="d-flex flex-grow-1  align-items-center px-4 py-2"
             style={{
               minHeight: "100px",
+              minWidth: "300px",
               background: "var(--muted-purple)",
               borderRadius: "8px",
             }}
           >
             <img src="/Play.svg" alt="" width={40} height={40} />
-            <img src="/AudioTrack.svg" alt="" />
+            <div className="d-flex flex-grow-1 align-items-center ps-3">
+              <span
+                className="rounded-circle"
+                style={{
+                  width: "8px",
+                  height: "8px",
+                  backgroundColor: "var(--light-purple)",
+                }}
+              />
+              <span
+                className="flex-grow-1"
+                style={{
+                  borderBottom: " 4px solid white",
+                  borderRadius: "0 9999px 9999px 0",
+                }}
+              />
+              <span className="ps-2">0:00</span>
+            </div>
             <img src="/AvatarWithMic.svg" alt="" />
           </div>
           <div className="d-flex gap-4 align-items-center">

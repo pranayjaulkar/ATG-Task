@@ -1,12 +1,7 @@
 import SignInAndJoinIn from "./SignInAndJoinIn";
 const Banner = () => {
   return (
-    <div
-      style={{
-        padding: "100px 100px 0 100px",
-        backgroundColor: "var(--bg-purple)",
-      }}
-    >
+    <div className="banner-main-container">
       <div
         className="d-flex justify-content-center"
         style={{ position: "relative" }}
@@ -18,9 +13,9 @@ const Banner = () => {
           <div className="d-flex flex-column col-12 col-lg-8 text-wrap text-break">
             <h2 className="mb-5 fs-1 fst-italic">
               <span>Explore your </span>
-              <span style={{ color: "var(--light-purple)" }}>hobby</span>{" "}
+              <span style={{ color: "var(--light-purple)" }}>hobby</span>
               <span> or </span>
-              <span style={{ color: "var(--light-purple)" }}>passion</span>
+              <span style={{ color: "var(--light-blue)" }}>passion</span>
             </h2>
             <div className="col-12 col-md-9 fs-6 lh-lg">
               <p className="mb-4">

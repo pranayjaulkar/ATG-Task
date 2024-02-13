@@ -1,6 +1,6 @@
 const AddYourOwnCard = () => {
   return (
-    <div style={{ background: "var(--lighter-blue)", padding: "100px" }}>
+    <div className="add-card-container">
       <div
         className="container mx-auto border bg-white"
         style={{ padding: "40px", borderRadius: "8px" }}

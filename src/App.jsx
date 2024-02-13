@@ -1,5 +1,5 @@
 import "./App.css";
-import AddYourOwnCard from "./components/AddYourOwnCard";
+import AddYourOwnCard from "./components/AddCard";
 import Banner from "./components/Banner";
 import Banner2 from "./components/Banner2";
 import Cards from "./components/Cards";
